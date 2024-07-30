@@ -8,6 +8,11 @@ const error = document.getElementById('error');
 const mensaje_error = document.getElementById('mensaje_error');
 const choices = document.getElementById('choices');
 
+// Function to remove accents from characters
+function removeAccents(str) {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
 video.addEventListener('ended', () => {
     invitationButton.style.display = 'block';
 });
@@ -39,7 +44,7 @@ const database = {
 };
 
 searchButton.addEventListener('click', () => {
-    const query = nameInput.value.toLowerCase().trim().split(' ');
+    const query = removeAccents(nameInput.value.toLowerCase().trim()).split(' ');
 
     if (!query.length) {
         mensaje_error.innerHTML = 'Por favor, escribe tu nombre.';
@@ -59,7 +64,7 @@ searchButton.addEventListener('click', () => {
     for (const family in database) {
         const members = database[family];
         const matches = members.filter(name => {
-            const lowerCaseName = name.toLowerCase();
+            const lowerCaseName = removeAccents(name.toLowerCase());
             return query.every(part => lowerCaseName.includes(part));
         });
 
@@ -71,11 +76,11 @@ searchButton.addEventListener('click', () => {
     }
 
     if (multipleMatches.length > 0) {
-        choices.innerHTML = multipleMatches.map(match => `<button class="choices-button">${match.name}</button>`).join('<br>');
+        choices.innerHTML = multipleMatches.map(match => `<button class="choices-button">${removeAccents(match.name)}</button>`).join('<br>');
         choices.style.display = 'block';
         document.querySelectorAll('.choices-button').forEach(button => {
             button.addEventListener('click', () => {
-                const selectedFamily = multipleMatches.find(match => match.name === button.textContent).family;
+                const selectedFamily = multipleMatches.find(match => removeAccents(match.name) === button.textContent).family;
                 result.innerHTML = `<h4>¡Hola ${button.textContent}!<br>Estas son las personas con las que puedes asistir a la boda:<br></h4>${database[selectedFamily].join('<br>')}<br><button id="goToInvitation">Ir a la invitación</button>`;
                 result.style.display = 'block';
                 choices.style.display = 'none';
