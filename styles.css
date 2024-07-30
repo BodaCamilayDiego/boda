@@ -1,0 +1,140 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.button, .input-container, .result, .error, .choices, .mensaje_error {
+    position: absolute;
+    width: 300px; /* Fixed width */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.button {
+    top: 75%;
+    display: none;
+    background-color: #9A5F5E; /* Olive green */
+    color: #fff;
+    border: none;
+    padding: 7px 9px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 112px;
+}
+.button:hover {
+    background-color: #FFDDDA; /* Color de fondo del botón al pasar el cursor (azul más oscuro) */
+    color: black;
+}
+
+.input-container {
+    top: 65%;
+    display: none;
+}
+
+.input-container input {
+    width: 60%; /* Keep full width within the fixed container */
+    padding: 6px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.input-container button {
+    width: 40%; /* Keep full width within the fixed container */
+    padding: 7px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    background-color: #9A5F5E; /* Steel blue */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.input-container button:hover {
+    background-color: #FFDDDA; /* Color de fondo del botón al pasar el cursor (azul más oscuro) */
+    color: black;
+}
+
+
+.result, .error, .choices, .mensaje_error {
+    top: 65%;
+    display: none;
+}
+
+.result {
+    top: 53%;
+    color: #9A5F5E;
+}
+
+.result button {
+    width: 50%; /* Keep full width within the fixed container */
+    padding: 10px;
+    margin-top: 50px; /* Se utiliza para dejar espacio entre un elemento y otro*/
+    font-size: 0.8rem;
+    background-color: #9A5F5E; /* Tomato */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.result button:hover {
+    background-color: #FFDDDA; /* Color de fondo del botón al pasar el cursor (azul más oscuro) */
+    color: black;
+}
+
+.error {
+    top: 63%;
+    color: #9A5F5E;
+    font-size: 1rem;
+}
+
+.mensaje_error {
+    top: 63.5%;
+    color: #9A5F5E;
+    font-size: 0.75rem;
+}
+
+.choices-button {
+    width: 50%; /* Fixed width */
+    padding: 7px;
+    margin-top: 8px;
+    font-size: 0.8rem;
+    background-color: #9A5F5E; /* Tomato */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.choices button:hover {
+    background-color: #FFDDDA; /* Color de fondo del botón al pasar el cursor (azul más oscuro) */
+    color: black;
+}

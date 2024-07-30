@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <video id="weddingVideo" autoplay muted>
+            <source src="Video/PASE INVITACIÓN.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="button" id="invitationButton">Busca tu invitación</div>
+        <div class="input-container" id="inputContainer">
+            <input type="text" id="nameInput" placeholder="Escribe tu nombre">
+            <button id="searchButton">Buscar</button>
+        </div>
+        <div class="result" id="result"></div>
+        <div class="error" id="error"></div>
+        <div class="mensaje_error" id="mensaje_error"></div>
+        <div class="choices" id="choices"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
