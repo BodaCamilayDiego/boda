@@ -19,16 +19,29 @@ invitationButton.addEventListener('click', () => {
 
 // Fake database
 const database = {
-    "familia_1": ["Ana Ana suarez", "Juan Gomez", "Maria Gomez", "Pedro Gomez"],
-    "familia_2": ["Ana Ana Lopez", "Carlos Lopez", "Luis Lopez"],
-    "familia_3": ["Ana Ana Lopez mendez", "Carlos gomez", "Luis Lopez"]
+    "familia_1": ["Diego Fernando Chavarro Sanchez", "Maria Camila De La Espriella Amaranto"],
+    "familia_2": ["Martha Lenis Sanchez Pinzon", "Raul Fernando Chavarro Mahecha"],
+    "familia_3": ["Delyn Cecilia Amaranto Ahumada", "Luna del Mar"],
+    "familia_4": ["Johana Andrea Molano Sanchez","Samuel Valero", "Luciana Valero Molano","Samuel Valero Molano"],
+    "familia_5": ["Nevys Amaranto Ahumada","Stefanny Novoa Amaranto"],
+    "familia_6": ["Matty Norris","Roony Norris"],
+    "familia_7": ["Paula Andrea Aldana Chavarro","Victoria Aldana Chavarro"],
+    "familia_8": ["David Mauricio Muñoz Sanchez","Pastor Antonio Muñoz","Rosa Lilia Sanchez Pinzon","Karen Nathaly Muñoz Sanchez","Juan Andres Giraldo Muñoz"],
+    "familia_9": [],
+    "familia_10": [],
+    "familia_11": [],
+    "familia_12": [],
+    "familia_13": [],
+    "familia_14": [],
+    "familia_15": [],
+    "familia_16": []
     // Add more families as needed
 };
 
 searchButton.addEventListener('click', () => {
-    const query = nameInput.value.toLowerCase().trim();
+    const query = nameInput.value.toLowerCase().trim().split(' ');
 
-    if (!query) {
+    if (!query.length) {
         mensaje_error.innerHTML = 'Por favor, escribe tu nombre.';
         mensaje_error.style.display = 'block';
         return;
@@ -44,12 +57,15 @@ searchButton.addEventListener('click', () => {
     let multipleMatches = [];
 
     for (const family in database) {
-        const members = database[family].map(name => name.toLowerCase());
-        const matches = members.filter(name => name.includes(query));
+        const members = database[family];
+        const matches = members.filter(name => {
+            const lowerCaseName = name.toLowerCase();
+            return query.every(part => lowerCaseName.includes(part));
+        });
 
         if (matches.length > 0) {
             multipleMatches.push(...matches.map(name => {
-                return { family, name };
+                return { family, name }; // Store original case name
             }));
         }
     }
@@ -71,7 +87,7 @@ searchButton.addEventListener('click', () => {
         });
     } else {
         mensaje_error.style.display = 'none';
-        error.innerHTML = `Hola ${nameInput.value}, no estás dentro de los invitados a la boda`;
+        error.innerHTML = `Hola ${nameInput.value}, no estás invitado a la boda.`;
         error.style.display = 'block';
     }
 });
