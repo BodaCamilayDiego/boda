@@ -26,7 +26,7 @@ invitationButton.addEventListener('click', () => {
 const database = {
     "familia_1": ["Diego Fernando Chavarro Sanchez", "Maria Camila De La Espriella Amaranto"],
     "familia_2": ["Martha Lenis Sanchez Pinzon", "Raul Fernando Chavarro Mahecha"],
-    "familia_3": ["Delyn Cecilia Amaranto Ahumada", "Luna del Mar"],
+    "familia_3": ["Delcin Cecilia Amaranto Ahumada", "Luna del Mar"],
     "familia_4": ["Johana Andrea Molano Sanchez","Samuel Valero", "Luciana Valero Molano","Samuel Valero Molano"],
     "familia_5": ["Nevys Amaranto Ahumada","Stefanny Novoa Amaranto"],
     "familia_6": ["Matty Norris","Roony Norris"],
