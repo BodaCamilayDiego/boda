@@ -62,7 +62,7 @@ video {
     width: 60%; /* Keep full width within the fixed container */
     padding: 6px;
     margin-top: 10px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .input-container button {

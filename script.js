@@ -24,14 +24,14 @@ invitationButton.addEventListener('click', () => {
 
 // Fake database
 const database = {
-    "familia_1": ["Diego Fernando Chavarro Sanchez", "Maria Camila De La Espriella Amaranto"],
-    "familia_2": ["Martha Lenis Sanchez Pinzon", "Raul Fernando Chavarro Mahecha"],
-    "familia_3": ["Delcin Cecilia Amaranto Ahumada", "Luna del Mar"],
-    "familia_4": ["Johana Andrea Molano Sanchez","Samuel Valero", "Luciana Valero Molano","Samuel Valero Molano"],
-    "familia_5": ["Nevys Amaranto Ahumada","Stefanny Novoa Amaranto"],
-    "familia_6": ["Matty Norris","Roony Norris"],
-    "familia_7": ["Paula Andrea Aldana Chavarro","Victoria Aldana Chavarro"],
-    "familia_8": ["David Mauricio Muñoz Sanchez","Pastor Antonio Muñoz","Rosa Lilia Sanchez Pinzon","Karen Nathaly Muñoz Sanchez","Juan Andres Giraldo Muñoz"],
+    "familia_1": ["Rosa Lilia Sanchez Pinzon","Pastor Antonio Muñoz","David Mauricio Muñoz Sanchez","Karen Nathaly Muñoz Sanchez","Juan Andres Giraldo Muñoz"],
+    "familia_2": ["Dora Alicia Sanchez Pinzon","Hugo Molano","Jennifer Paola Molano Sanchez"],
+    "familia_3": ["Johana Andrea Molano Sanchez","Samuel Valero Rubio", "Luciana Valero Molano","Samuel Valero Molano","Juliana Valero"],
+    "familia_4": ["Angelica Maria Perez Sanchez", "Francisco Javier Perez Rocha"],
+    "familia_5": ["Luz Edith Sanchez Pinzon","Nestor Hernan Latorre Latorre"],
+    "familia_6": ["Luis Alberto Sanchez Pinzon","Yolanda Sierra Chaparro","Laura Ximena Sanchez Sierra"],
+    "familia_7": ["Jenny Marcela Sanchez Sierra","Luis David Contreras Lopez"],
+    "familia_8": ["Carlos Enrique Sanchez Pinzon", "Ana Maria Rojas Junca", "Valentina Sanchez Rojas", "Juan Camilo Rodriguez Castro"],
     "familia_9": [],
     "familia_10": [],
     "familia_11": [],
@@ -44,13 +44,17 @@ const database = {
 };
 
 searchButton.addEventListener('click', () => {
-    const query = removeAccents(nameInput.value.toLowerCase().trim()).split(' ');
+    const inputValue = nameInput.value.trim();
+    const words = inputValue.split(' ').filter(word => word.length > 0);
+    //const query = removeAccents(nameInput.value.toLowerCase().trim()).split(' ');
 
-    if (!query.length) {
-        mensaje_error.innerHTML = 'Por favor, escribe tu nombre.';
+    if (words.length < 2) {
+        mensaje_error.innerHTML = 'Por favor, escribe tu nombre y apellido.';
         mensaje_error.style.display = 'block';
         return;
     }
+
+    const query = removeAccents(inputValue.toLowerCase()).split(' ');
 
     inputContainer.style.display = 'none';
     result.style.display = 'none';
@@ -81,18 +85,21 @@ searchButton.addEventListener('click', () => {
         document.querySelectorAll('.choices-button').forEach(button => {
             button.addEventListener('click', () => {
                 const selectedFamily = multipleMatches.find(match => removeAccents(match.name) === button.textContent).family;
-                result.innerHTML = `<h4>¡Hola ${button.textContent}!<br>Estas son las personas con las que puedes asistir a la boda:<br></h4>${database[selectedFamily].join('<br>')}<br><button id="goToInvitation">Ir a la invitación</button>`;
+                const fullName = button.textContent;
+                const firstName = fullName.split(' ')[0]; // Obtener la primera palabra (primer nombre)
+
+                result.innerHTML = `<h4>¡Hola ${firstName}!<br>Estas son las personas con las que puedes asistir a la boda:<br></h4>${database[selectedFamily].join('<br>')}<br><button id="goToInvitation">Ir a la invitación</button>`;
                 result.style.display = 'block';
                 choices.style.display = 'none';
                 mensaje_error.style.display = 'none';
                 document.getElementById('goToInvitation').addEventListener('click', () => {
-                    window.location.href = 'https://www.youtube.com/watch?v=673QN0h9jPQ';
+                    window.location.href = 'https://matrimonicamilaydiego.my.canva.site/invitaci-n';
                 });
             });
         });
     } else {
         mensaje_error.style.display = 'none';
-        error.innerHTML = `Hola ${nameInput.value}, no estás invitado a la boda.`;
+        error.innerHTML = `Hola ${nameInput.value}, no estás invitado(a) a la boda.`;
         error.style.display = 'block';
     }
 });
