@@ -145,3 +145,14 @@ video {
     background-color: #FFDDDA;
     color: black;
 }
+
+.instruction {
+    position: absolute;
+    top: 60%; /* Ajusta según la posición deseada */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #9A5F5E; /* Mismo color que los otros textos */
+    font-size: 1rem;
+    text-align: center;
+    width: 300px; /* Ajusta según el tamaño deseado */
+}
