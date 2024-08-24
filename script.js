@@ -80,6 +80,7 @@ const database = {
 
     // Add more families as needed
 };
+const instruction = document.getElementById('instruction');
 
 searchButton.addEventListener('click', () => {
     const inputValue = nameInput.value.trim();
@@ -118,10 +119,12 @@ searchButton.addEventListener('click', () => {
     }
 
     if (multipleMatches.length > 0) {
+        instruction.style.display = 'block';  // Mostrar la instrucción
         choices.innerHTML = multipleMatches.map(match => `<button class="choices-button">${removeAccents(match.name)}</button>`).join('<br>');
         choices.style.display = 'block';
         document.querySelectorAll('.choices-button').forEach(button => {
             button.addEventListener('click', () => {
+                instruction.style.display = 'none';  // Ocultar la instrucción
                 const selectedFamily = multipleMatches.find(match => removeAccents(match.name) === button.textContent).family;
                 const fullName = button.textContent;
                 const firstName = fullName.split(' ')[0]; // Obtener la primera palabra (primer nombre)
