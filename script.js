@@ -78,6 +78,8 @@ const database = {
 
 };
 
+const instruction = document.getElementById('instruction');
+
 searchButton.addEventListener('click', () => {
     const inputValue = nameInput.value.trim();
     const words = inputValue.split(' ').filter(word => word.length > 0);
@@ -114,10 +116,12 @@ searchButton.addEventListener('click', () => {
     }
 
     if (multipleMatches.length > 0) {
-        choices.innerHTML = `<p>Escoge tu nombre:</p>` + multipleMatches.map(match => `<button class="choices-button">${removeAccents(match.name)}</button>`).join('<br>');
+        instruction.style.display = 'block';  // Mostrar la instrucción
+        choices.innerHTML = multipleMatches.map(match => `<button class="choices-button">${removeAccents(match.name)}</button>`).join('<br>');
         choices.style.display = 'block';
         document.querySelectorAll('.choices-button').forEach(button => {
             button.addEventListener('click', () => {
+                instruction.style.display = 'none';
                 const selectedFamily = multipleMatches.find(match => removeAccents(match.name) === button.textContent).family;
                 const fullName = button.textContent;
                 const firstName = fullName.split(' ')[0];
