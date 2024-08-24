@@ -48,7 +48,7 @@ const database = {
     "familia_22": ["Tatiana De La Rosa Amaranto","Adriana de los Santos Martín"],
     "familia_23": ["Luis Jose Ariza Amaranto"],
     "familia_24": ["Yulvis Esther Castro Amaranto","Yeison Alfonso Fajardo "],
-    "familia_25": ["Nevis Judith Amaranto Ahumada","Stefanny Paola Novoa Amaranto"],
+    "familia_25": ["Nevys Judith Amaranto Ahumada","Stefanny Paola Novoa Amaranto"],
     "familia_26": ["Arelys Ariza Amaranto","Brayan Castro Ariza"],
     "familia_27": ["Duvan Efren Sarmiento Sachica","Leidy Johanna Vergara Giraldo"],
     "familia_28": ["Jhoan Sebastian Bustos Heredia","Mayerly Tatiana Bautista"],
@@ -76,16 +76,11 @@ const database = {
     "familia_50": ["Magali"],
     "familia_50": ["Maria Camila De La Espriella Amaranto", "Diego Fernando Chavarro Sanchez"]
 
-
-
-    // Add more families as needed
 };
-const instruction = document.getElementById('instruction');
 
 searchButton.addEventListener('click', () => {
     const inputValue = nameInput.value.trim();
     const words = inputValue.split(' ').filter(word => word.length > 0);
-    //const query = removeAccents(nameInput.value.toLowerCase().trim()).split(' ');
 
     if (words.length < 2) {
         mensaje_error.innerHTML = 'Por favor, escribe tu nombre y apellido.';
@@ -113,21 +108,19 @@ searchButton.addEventListener('click', () => {
 
         if (matches.length > 0) {
             multipleMatches.push(...matches.map(name => {
-                return { family, name }; // Store original case name
+                return { family, name };
             }));
         }
     }
 
     if (multipleMatches.length > 0) {
-        instruction.style.display = 'block';  // Mostrar la instrucción
-        choices.innerHTML = multipleMatches.map(match => `<button class="choices-button">${removeAccents(match.name)}</button>`).join('<br>');
+        choices.innerHTML = `<p>Escoge tu nombre:</p>` + multipleMatches.map(match => `<button class="choices-button">${removeAccents(match.name)}</button>`).join('<br>');
         choices.style.display = 'block';
         document.querySelectorAll('.choices-button').forEach(button => {
             button.addEventListener('click', () => {
-                instruction.style.display = 'none';  // Ocultar la instrucción
                 const selectedFamily = multipleMatches.find(match => removeAccents(match.name) === button.textContent).family;
                 const fullName = button.textContent;
-                const firstName = fullName.split(' ')[0]; // Obtener la primera palabra (primer nombre)
+                const firstName = fullName.split(' ')[0];
 
                 result.innerHTML = `<h4>¡Hola ${firstName}!<br>Estas son las personas con las que puedes asistir a la boda:<br></h4>${database[selectedFamily].join('<br>')}<br><button id="goToInvitation">Ir a la invitación</button>`;
                 result.style.display = 'block';

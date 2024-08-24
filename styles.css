@@ -7,7 +7,7 @@ body, html {
 }
 
 .container {
-    position: absolute;
+    position: relative; /* Cambiado de absolute a relative */
     top: 0;
     left: 0;
     width: 100%;
@@ -30,7 +30,7 @@ video {
 
 .button, .input-container, .result, .error, .choices, .mensaje_error {
     position: absolute;
-    width: 300px; /* Fixed width */
+    width: 300px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -39,7 +39,7 @@ video {
 .button {
     top: 75%;
     display: none;
-    background-color: #9A5F5E; /* Olive green */
+    background-color: #9A5F5E;
     color: #fff;
     border: none;
     padding: 7px 9px;
@@ -47,9 +47,11 @@ video {
     cursor: pointer;
     border-radius: 5px;
     width: 112px;
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease; /* Safari */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 .button:hover {
-    background-color: #FFDDDA; /* Color de fondo del botón al pasar el cursor (azul más oscuro) */
+    background-color: #FFDDDA;
     color: black;
 }
 
@@ -59,29 +61,30 @@ video {
 }
 
 .input-container input {
-    width: 60%; /* Keep full width within the fixed container */
+    width: 60%;
     padding: 6px;
     margin-top: 10px;
     font-size: 0.8rem;
 }
 
 .input-container button {
-    width: 40%; /* Keep full width within the fixed container */
+    width: 40%;
     padding: 7px;
     margin-top: 10px;
     font-size: 0.9rem;
-    background-color: #9A5F5E; /* Steel blue */
+    background-color: #9A5F5E;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease; /* Safari */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .input-container button:hover {
-    background-color: #FFDDDA; /* Color de fondo del botón al pasar el cursor (azul más oscuro) */
+    background-color: #FFDDDA;
     color: black;
 }
-
 
 .result, .error, .choices, .mensaje_error {
     top: 65%;
@@ -94,19 +97,21 @@ video {
 }
 
 .result button {
-    width: 50%; /* Keep full width within the fixed container */
+    width: 50%;
     padding: 10px;
-    margin-top: 50px; /* Se utiliza para dejar espacio entre un elemento y otro*/
+    margin-top: 50px;
     font-size: 0.8rem;
-    background-color: #9A5F5E; /* Tomato */
+    background-color: #9A5F5E;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease; /* Safari */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .result button:hover {
-    background-color: #FFDDDA; /* Color de fondo del botón al pasar el cursor (azul más oscuro) */
+    background-color: #FFDDDA;
     color: black;
 }
 
@@ -123,29 +128,20 @@ video {
 }
 
 .choices-button {
-    width: 50%; /* Fixed width */
+    width: 50%;
     padding: 7px;
     margin-top: 8px;
     font-size: 0.8rem;
-    background-color: #9A5F5E; /* Tomato */
+    background-color: #9A5F5E;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease; /* Safari */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .choices button:hover {
-    background-color: #FFDDDA; /* Color de fondo del botón al pasar el cursor (azul más oscuro) */
+    background-color: #FFDDDA;
     color: black;
-}
-
-.instruction {
-    position: absolute;
-    top: 60%; /* Ajusta según la posición deseada */
-    left: 50%;
-    transform: translateX(-50%);
-    color: #9A5F5E; /* Mismo color que los otros textos */
-    font-size: 1rem;
-    text-align: center;
-    width: 300px; /* Ajusta según el tamaño deseado */
 }
