@@ -48,7 +48,7 @@ const database = {
     "familia_22": ["Tatiana De La Rosa Amaranto","Adriana de los Santos Martín"],
     "familia_23": ["Luis Jose Ariza Amaranto"],
     "familia_24": ["Yulvis Esther Castro Amaranto","Yeison Alfonso Fajardo "],
-    "familia_25": ["Nevis Judith Amaranto Ahumada","Steffany Paola Novoa Amaranto"],
+    "familia_25": ["Nevis Judith Amaranto Ahumada","Stefanny Paola Novoa Amaranto"],
     "familia_26": ["Arelys Ariza Amaranto","Brayan Castro Ariza"],
     "familia_27": ["Duvan Efren Sarmiento Sachica","Leidy Johanna Vergara Giraldo"],
     "familia_28": ["Jhoan Sebastian Bustos Heredia","Mayerly Tatiana Bautista"],
