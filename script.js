@@ -46,7 +46,7 @@ const database = {
     "familia_20": ["Juan Sebastian De La Rosa Amaranto","Daniela Quiñones"],
     "familia_21": ["Milton Jose De La Rosa Amaranto","Ana Milena Pardo Leal"],
     "familia_22": ["Tatiana De La Rosa Amaranto","Adriana de los Santos Martín"],
-    "familia_23": [],
+    "familia_23": ["Natalia Diaz Montoya","Andres Felipe Wilches"],
     "familia_24": ["Yulvis Esther Castro Amaranto","Yeison Alfonso Fajardo "],
     "familia_25": ["Nevys Judith Amaranto Ahumada","Stefanny Paola Novoa Amaranto"],
     "familia_26": ["Arelys Ariza Amaranto","Brayan Castro Ariza","Luis Jose Ariza Amaranto"],
