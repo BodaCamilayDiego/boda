@@ -73,12 +73,13 @@ const database = {
     "familia_47": ["Martiza Ahumada"],
     "familia_48": ["Blanca Liliana Diaz Rodriguez", "e hijo"],
     "familia_49": ["Duby De La Torre", "Jacob Fer"],
-    "familia_50": ["Magalys Ahumada"],
+    "familia_50": ["Magalys Ahumada", "Camila Andrea Almario"],
     "familia_51": ["Maria Camila De La Espriella Amaranto", "Diego Fernando Chavarro Sanchez"],
     "familia_52": ["Digna Margarita Rodriguez Ahumada","Marcos Pertuz"],
     "familia_53": ["Maritza Ahumada"],
-    "familia_54": ["Natalia Diaz Montoya", "Andres Felipe Wilches"]
-
+    "familia_54": ["Natalia Diaz Montoya", "Andres Felipe Wilches"],
+    "familia_55": ["Alvaro Cuentas Ahumada","Vivian Fontalbo","Juan David Cuentas Fontalbo","Jesus David Cuentas Fontalbo"],
+    "familia_55": ["Donaldo Cuentas Ahumada "]
 };
 
 const instruction = document.getElementById('instruction');
