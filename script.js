@@ -73,9 +73,11 @@ const database = {
     "familia_47": ["Martiza Ahumada"],
     "familia_48": ["Blanca Liliana Diaz Rodriguez", "e hijo"],
     "familia_49": ["Duby De La Torre", "Jacob Fer"],
-    "familia_50": ["Magali"],
-    "familia_50": ["Maria Camila De La Espriella Amaranto", "Diego Fernando Chavarro Sanchez"],
-    "familia_50": ["Digna Margarita Rodriguez Ahumada","Marcos Pertuz"]
+    "familia_50": ["Magalys Ahumada"],
+    "familia_51": ["Maria Camila De La Espriella Amaranto", "Diego Fernando Chavarro Sanchez"],
+    "familia_52": ["Digna Margarita Rodriguez Ahumada","Marcos Pertuz"],
+    "familia_53": ["Maritza Ahumada"],
+    "familia_54": ["Natalia Diaz Montoya", "Andres Felipe Wilches"]
 
 };
 
