@@ -79,7 +79,8 @@ const database = {
     "familia_53": ["Maritza Ahumada"],
     "familia_54": ["Natalia Diaz Montoya", "Andres Felipe Wilches"],
     "familia_55": ["Alvaro Cuentas Ahumada","Vivian Fontalbo","Juan David Cuentas Fontalbo","Jesus David Cuentas Fontalbo"],
-    "familia_55": ["Donaldo Cuentas Ahumada "]
+    "familia_55": ["Donaldo Cuentas Ahumada"],
+    "familia_56": ["Gloria Maria Avila"]
 };
 
 const instruction = document.getElementById('instruction');
