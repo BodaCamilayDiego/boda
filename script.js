@@ -79,10 +79,10 @@ const database = {
     "familia_53": ["Maritza Ahumada"],
     "familia_54": ["Natalia Diaz Montoya", "Andres Felipe Wilches"],
     "familia_55": ["Alvaro Cuentas Ahumada","Vivian Fontalbo","Juan David Cuentas Fontalbo","Jesus David Cuentas Fontalbo"],
-    "familia_55": ["Donaldo Cuentas Ahumada"],
-    "familia_56": ["Gloria Maria Avila", "& Acompañante"],
-    "familia_57": ["Nancy Perez","Henry Zorro"],
-    "familia_57": ["Nicodemus Lemus Paez","& Esposa"]
+    "familia_56": ["Donaldo Cuentas Ahumada"],
+    "familia_57": ["Gloria Maria Avila", "& Acompañante"],
+    "familia_58": ["Nancy Perez","Henry Zorro"],
+    "familia_59": ["Nicodemos Paez Lamuz","Maria Cristina Gomez Nova"]
 
 };
 
