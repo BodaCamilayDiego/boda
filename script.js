@@ -39,7 +39,7 @@ const database = {
     "familia_13": ["Victor Alfredo Chavarro Mahecha","Monica Carranza","Laura Milena Chavarro Carranza","Samuel Chavarro Carranza"],
     "familia_14": ["Jorge Alberto Chavarro Mahecha","Marta Cecilia Ramirez Fierro","Daniel Felipe Chavarro Ramirez"],
     "familia_15": ["Mario Alvarez Chavarro","Giovanna Alexandra Correa Bernal","Constanza Bernal","Francisco Alvarez Correa"],
-    "familia_16": ["Oscar Raul Chavarro Rodriguez","+1 Acompañante"],
+    "familia_16": ["Oscar Raul Chavarro Rodriguez","& Señora"],
     "familia_17": ["Felix Rodrigo Chavarro Brijando", "Diana Marcela Naranjo Carranza"],
     "familia_18": ["Delcin Cecilia Amaranto Ahumada", "Luna del Mar"],
     "familia_19": ["Osvaldo De La Rosa"],
