@@ -50,7 +50,7 @@ const database = {
     "familia_24": ["Yulvis Esther Castro Amaranto","Yeison Alfonso Fajardo "],
     "familia_25": ["Nevys Judith Amaranto Ahumada","Stefanny Paola Novoa Amaranto"],
     "familia_26": ["Arelys Ariza Amaranto","Brayan Castro Ariza","Luis Jose Ariza Amaranto"],
-    "familia_27": ["Duvan Efren Sarmiento Sachica","Leidy Johanna Vergara Giraldo"],
+    "familia_27": ["Duvan Efren Sarmiento Sachica","Leidy Johanna Vergara Giraldo","Gloria Ines Sachica"],
     "familia_28": ["Jhoan Sebastian Bustos Heredia","Mayerly Tatiana Bautista"],
     "familia_29": ["Cristian Camilo Vela Merchan","Maria Alejandra Guzman Cruz"],
     "familia_30": ["Sebastian Camilo Riaño Palacios"],
@@ -82,8 +82,14 @@ const database = {
     "familia_56": ["Donaldo Cuentas Ahumada"],
     "familia_57": ["Gloria Maria Avila", "& Acompañante"],
     "familia_58": ["Nancy Perez","Henry Zorro"],
-    "familia_59": ["Nicodemos Paez Lamuz","Maria Cristina Gomez Nova"]
-
+    "familia_59": ["Nicodemos Paez Lamuz","Maria Cristina Gomez Nova"],
+    "familia_60": ["Lorena Amaranto","e hijas"],
+    "familia_61": ["Ninfa Ahumada","e hijos"],
+    "familia_62": ["Yaneth Ahumada","& Esposo"],
+    "familia_63": ["Edgar Ahumada" ,"& Esposa"],
+    "familia_64": ["Osbaldo Ahumada","& Esposa"],
+    "familia_65": ["Norman Elimio Ahumada","& Esposa"],
+    "familia_66": ["Nicodemos Paez Lamuz","Maria Cristina Gomez Nova"]
 };
 
 const instruction = document.getElementById('instruction');
