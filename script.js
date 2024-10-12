@@ -42,9 +42,9 @@ const database = {
     "familia_16": ["Oscar Raul Chavarro Rodriguez","& Señora"],
     "familia_17": ["Felix Rodrigo Chavarro Brijando", "Diana Marcela Naranjo Carranza"],
     "familia_18": ["Delcin Cecilia Amaranto Ahumada", "Luna del Mar"],
-    "familia_19": ["Osvaldo De La Rosa"],
+    "familia_19": ["Osvaldo De La Rosa", "Milton Jose De La Rosa Amaranto"],
     "familia_20": ["Juan Sebastian De La Rosa Amaranto","Daniela Quiñones"],
-    "familia_21": ["Milton Jose De La Rosa Amaranto","Ana Milena Pardo Leal"],
+    "familia_21": [],
     "familia_22": ["Tatiana De La Rosa Amaranto","Adriana de los Santos Martín"],
     "familia_23": ["Natalia Diaz Montoya","Andres Felipe Wilches"],
     "familia_24": ["Yulvis Esther Castro Amaranto","Yeison Alfonso Fajardo "],
@@ -89,7 +89,8 @@ const database = {
     "familia_63": ["Edgar Ahumada" ,"& Esposa"],
     "familia_64": ["Osbaldo Ahumada","& Esposa"],
     "familia_65": ["Norman Elimio Ahumada","& Esposa"],
-    "familia_66": ["Nicodemos Paez Lamuz","Maria Cristina Gomez Nova"]
+    "familia_66": ["Nicodemos Paez Lamuz","Maria Cristina Gomez Nova"],
+    "familia_67": ["Eduardo Guevara","Duby Hernandez"]
 };
 
 const instruction = document.getElementById('instruction');
