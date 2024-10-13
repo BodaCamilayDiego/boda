@@ -59,7 +59,7 @@ const database = {
     "familia_33": ["Angela Maria Escobar Leon", "& Esposo"],
     "familia_34": ["Claudia Marcela Forero Gonzalez"],
     "familia_35": ["Camilo Andrés Garcia Rico","Karen Valeria Lopez Sierra"],
-    "familia_36": ["Paula Andrea Tovar Zorro","Eduardo Gonzalez Santos"],
+    "familia_36": ["Paula Andrea Tovar Zorro","Eduardo Gonzalez Santos","Sandra Esperanza Zorro Ruiz"],
     "familia_37": ["Juliana Velasquez Noreña"],
     "familia_38": ["Maria Fernanda Torres Almonacid"],
     "familia_39": ["Ana Maria Rosero Wilches"],
@@ -89,8 +89,7 @@ const database = {
     "familia_63": ["Edgar Ahumada" ,"& Esposa"],
     "familia_64": ["Osbaldo Ahumada","& Esposa"],
     "familia_65": ["Norman Elimio Ahumada","& Esposa"],
-    "familia_66": ["Nicodemos Paez Lamuz","Maria Cristina Gomez Nova"],
-    "familia_67": ["Eduardo Guevara","Duby Hernandez"]
+    "familia_66": ["Eduardo Guevara","Duby Hernandez"]
 };
 
 const instruction = document.getElementById('instruction');
