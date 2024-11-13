@@ -89,7 +89,8 @@ const database = {
     "familia_63": ["Edgar Ahumada" ,"& Esposa"],
     "familia_64": ["Osbaldo Ahumada","& Esposa"],
     "familia_65": ["Norman Elimio Ahumada","& Esposa"],
-    "familia_66": ["Eduardo Guevara","Duby Hernandez"]
+    "familia_66": ["Eduardo Guevara","Duby Hernandez"],
+    "familia_67": ["Jonathan Fernando Cepeda Parra", "Ana Cristina Perez Alegria"]
 };
 
 const instruction = document.getElementById('instruction');
